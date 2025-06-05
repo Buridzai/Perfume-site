@@ -4,31 +4,6 @@ Một **RESTful API** cho ứng dụng bán nước hoa, xây dựng bằng Gola
 
 ---
 
-## 📋 Mục Lục
-
-1. [Giới thiệu](#giới-thiệu)  
-2. [Tính năng chính](#tính-năng-chính)  
-3. [Công nghệ & Công cụ](#công-nghệ--công-cụ)  
-4. [Yêu cầu trước khi cài đặt](#yêu-cầu-trước-khi-cài-đặt)  
-5. [Cài đặt & Chạy ứng dụng (Local)](#cài-đặt--chạy-ứng-dụng-local)  
-   - [1. Clone source](#1-clone-source)  
-   - [2. Cấu hình biến môi trường](#2-cấu-hình-biến-môi-trường)  
-   - [3. Cài đặt dependencies](#3-cài-đặt-dependencies)  
-   - [4. Khởi chạy database (PostgreSQL)](#4-khởi-chạy-database-postgresql)  
-   - [5. Chạy Migration & Seed (nếu có)](#5-chạy-migration--seed-nếu-có)  
-   - [6. Chạy server với `air`](#6-chạy-server-với-air)  
-   - [7. Thay đổi port/host (tuỳ chọn)](#7-thay-đổi-porthost-tuỳ-chọn)  
-6. [Chạy bằng Docker](#chạy-bằng-docker)  
-   - [1. Build image](#1-build-image)  
-   - [2. Chạy multi-container (Docker Compose)](#2-chạy-multi-container-docker-compose)  
-7. [Tài liệu API (Swagger/Swaggo)](#tài-liệu-api-swaggerswaggo)  
-8. [Cấu trúc thư mục](#cấu-trúc-thư-mục)  
-9. [Ví dụ Request – Response](#ví-dụ-request--response)  
-10. [Các lệnh hay dùng](#các-lệnh-hay-dùng)  
-11. [Hướng phát triển thêm (Phần 2)](#hướng-phát-triển-thêm-phần-2)  
-12. [License](#license)  
-
----
 
 ## Giới thiệu
 
@@ -92,20 +67,4 @@ Một **RESTful API** cho ứng dụng bán nước hoa, xây dựng bằng Gola
 
 ---
 
-## Yêu cầu trước khi cài đặt
 
-1. **Go** đã được cài đặt (phiên bản ≥ 1.20).  
-2. **PostgreSQL** (phiên bản ≥ 13) hoặc container DB nếu dùng Docker.  
-3. **Docker** và **Docker Compose** (nếu muốn chạy container).  
-4. **Git** (để clone repository).  
-5. **Air** (khi phát triển local, có thể cài bằng `go install github.com/cosmtrek/air@latest`).  
-
----
-
-## Cài đặt & Chạy ứng dụng (Local)
-
-### 1. Clone source
-
-```bash
-git clone https://github.com/<your-username>/perfume-api.git
-cd perfume-api
