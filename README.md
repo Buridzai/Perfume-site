@@ -109,25 +109,6 @@ Dưới đây liệt kê những tiêu chí trong Part 2 mà dự án hiện t�
 
 ---
 
-### Lời khuyên chung khi hoàn thiện:
 
-- **Ưu tiên thứ tự thực hiện**:  
-  1. **Redis Caching**: Giúp cải thiện hiệu năng ngay lập tức khi cache kết quả truy vấn.  
-  2. **Logging nâng cao (Logrus/Zerolog) & Logging tập trung**: Cung cấp khả năng giám sát log, phục vụ debug và vận hành.  
-  3. **RabbitMQ**: Tạo nền tảng xử lý bất đồng bộ cho các tác vụ nặng, như gửi email hoặc xử lý đơn hàng.  
-  4. **OpenTelemetry**: Khi đã có logging và caching, việc thêm observability bằng tracing sẽ giúp bạn theo dõi end-to-end hiệu năng ứng dụng.  
-  5. **Dependency Injection (fx/wire)**: Xây dựng cấu trúc code rõ ràng, dễ mở rộng và bảo trì hơn khi dự án phát triển.
-
-- **Triển khai trong Docker Compose**:  
-  - Khi thêm Redis, RabbitMQ, Elasticsearch/Kibana hoặc Grafana Loki, bạn nên cập nhật `docker-compose.yml` để cả backend và các service hỗ trợ (Redis, RabbitMQ, Elasticsearch, Kibana, Loki) đều được chạy cùng nhau.  
-  - Kiểm tra kết nối giữa các container (hostname, port) để đảm bảo ứng dụng Golang có thể truy cập Redis, RabbitMQ, v.v.
-
-- **Từng bước validate**:  
-  - Sau khi hoàn thiện mỗi thành phần (VD: Redis), hãy viết một endpoint thử nghiệm để kiểm tra kết nối và thao tác với Redis.  
-  - Tương tự, sau khi tích hợp Logrus, hãy ghi log thử và chắc chắn nó xuất ra đúng format.  
-  - Khi hoàn tất RabbitMQ, send/receive một message mẫu để đảm bảo queue hoạt động chính xác.  
-  - Với OpenTelemetry, gửi một vài request và kiểm tra trace đã xuất đúng lên Jaeger/Tempo.
-
----
 
 
