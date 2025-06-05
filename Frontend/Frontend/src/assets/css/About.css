@@ -1,0 +1,116 @@
+/* src/pages/About.css */
+
+/* ---------- Toàn trang About ---------- */
+.about-page {
+  max-width: 700px;             /* Giới hạn chiều ngang */
+  margin: 60px auto;            /* Căn giữa trang, cách trên 60px */
+  padding: 0 20px;              /* Padding hai bên */
+  font-family: "Segoe UI", sans-serif;
+  background-color: #faf5f8;    /* Nền hồng nhạt rất nhẹ */
+}
+
+/* ---------- Thẻ Card chính chứa nội dung ---------- */
+.about-card {
+  background-color: #ffffff;    /* Nền trắng */
+  border-radius: 16px;          /* Bo góc mềm */
+  padding: 32px;                /* Khoảng cách xung quanh nội dung */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- Tiêu đề trang ---------- */
+.about-card h1 {
+  color: #d63384;               /* Hồng đậm */
+  font-size: 2.25rem;           /* Tiêu đề lớn */
+  font-weight: 600;
+  margin-bottom: 24px;          /* Cách dưới 24px */
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Đoạn mở đầu ---------- */
+.about-intro {
+  color: #444;                  /* Màu chữ đậm/đỏm mắt hơn */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* ---------- Đoạn sứ mệnh / nội dung chính ---------- */
+.about-mission {
+  color: #555;                  /* Nhẹ hơn một chút */
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* ---------- Danh sách bullet points ---------- */
+.about-list {
+  list-style: none;             /* Loại bỏ bullet mặc định */
+  margin: 0 0 24px 0;           /* Cách dưới 24px */
+  padding: 0;
+}
+
+.about-list li {
+  position: relative;          
+  padding-left: 28px;           /* Chừa chỗ cho icon hoặc bullet tùy chỉnh */
+  margin-bottom: 12px;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Tạo "bullet" hình bông hoa nhỏ hoặc chấm hồng */
+.about-list li::before {
+  content: "🌸";                /* Bạn có thể thay bằng "•" hoặc icon khác */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  color: #d63384;              /* Hồng đậm */
+  line-height: 1; 
+}
+
+/* ---------- Đoạn kết ---------- */
+.about-closing {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Tô đậm câu cuối */
+.about-closing .highlight {
+  color: #d63384;               /* Hồng đậm */
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* ---------- Responsive (điện thoại) ---------- */
+@media (max-width: 600px) {
+  .about-page {
+    padding: 0 16px;
+    margin: 40px auto;
+  }
+
+  .about-card {
+    padding: 24px;
+  }
+
+  .about-card h1 {
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+  }
+
+  .about-intro,
+  .about-mission,
+  .about-closing {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-list li {
+    padding-left: 24px;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,56 @@
+.admin-users {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-users h2 {
+  font-size: 1.6rem;
+  color: #d63384;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.admin-users .status-msg {
+  color: #d63384;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.admin-users table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  background: #fff;
+}
+
+.admin-users th,
+.admin-users td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid #f2e4eb;
+}
+
+.admin-users th {
+  background: #fff0f6;
+  color: #d63384;
+  font-weight: 600;
+}
+
+.admin-users button {
+  background: #ffe0eb;
+  border: none;
+  color: #d63384;
+  padding: 6px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.admin-users button:hover {
+  background: #ffc1d8;
+}

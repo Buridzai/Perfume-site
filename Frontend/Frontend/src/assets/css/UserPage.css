@@ -1,0 +1,159 @@
+/* src/pages/UserPage.css */
+
+/* ---------- Toàn trang UserPage ---------- */
+.user-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #faf5f8;    /* Nền hồng nhạt rất nhẹ */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* ---------- Card Thông tin người dùng ---------- */
+.user-card {
+  background-color: #ffffff;    /* Nền trắng */
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin: 24px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.user-card h2 {
+  color: #d63384;               /* Hồng đậm */
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Các dòng thông tin user */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Khoảng cách giữa mỗi dòng */
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #333;
+}
+
+.info-row .label {
+  font-weight: 500;
+}
+
+.info-row .value {
+  font-weight: 400;
+  color: #555;
+}
+
+/* Nút Đăng xuất */
+.btn-logout {
+  position: absolute;
+  top: 28px;
+  right: 32px;
+  background-color: #d63384;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-logout:hover {
+  background-color: #b62c70;
+  transform: translateY(-1px);
+}
+
+/* ---------- Card Lịch sử Đơn hàng ---------- */
+.orders-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.orders-card h2 {
+  color: #d63384;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Bảng đơn hàng */
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+.orders-table th,
+.orders-table td {
+  padding: 12px 10px;
+  text-align: center;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.orders-table th {
+  background-color: #fceef5;  /* Hồng nhạt */
+  color: #a63a6a;             /* Hồng nhạt đậm hơn */
+  font-weight: 600;
+}
+
+.orders-table tr:hover {
+  background-color: #fff0f6;  /* Hồng rất nhạt khi hover */
+}
+
+.orders-table td {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Nếu không có đơn hàng */
+.orders-card p {
+  font-size: 1rem;
+  color: #555;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* ---------- Responsive (điện thoại) ---------- */
+@media (max-width: 700px) {
+  .user-page {
+    padding: 0 16px;
+    margin: 20px auto;
+  }
+
+  .user-card,
+  .orders-card {
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  .user-card h2,
+  .orders-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .orders-table th,
+  .orders-table td {
+    padding: 10px 6px;
+    font-size: 0.85rem;
+  }
+
+  .btn-logout {
+    top: 20px;
+    right: 20px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}

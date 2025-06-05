@@ -1,0 +1,138 @@
+/* ====================================
+   Home.css - Clean & Modern Carousel
+   ==================================== */
+
+/* === Toàn bộ trang Home === */
+.home-page {
+  max-width: 1024px;
+  margin: 40px auto;
+  padding: 24px;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+  background-color: #faf5f8; /* Hồng nhạt */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+/* === Carousel wrapper (giữ tỉ lệ, bo góc, bóng đổ) === */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;       /* giữ tỉ lệ 16:9 */
+  margin-bottom: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #fff;   /* nền trắng cho hình nổi bật */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* === Ảnh trong carousel === */
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+/* Chỉ render ảnh đang active */
+.carousel-image.active {
+  opacity: 1;
+}
+
+/* === Navigation dots phía dưới carousel === */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(214, 51, 132, 0.4); /* hồng nhạt */
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-dot.active {
+  background-color: #d63384; /* hồng đậm */
+  transform: scale(1.3);
+}
+
+/* === Phần văn bản giới thiệu === */
+.home-text {
+  margin: 32px 0;
+}
+
+.home-text h1 {
+  color: #d63384;        /* Hồng đậm */
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.home-text h2 {
+  color: #b62c70;        /* Hồng nhạt hơn */
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  letter-spacing: 0.3px;
+}
+
+.home-text p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* === Button khám phá (tuỳ chọn) === */
+.home-text .btn-explore {
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: #d63384;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.home-text .btn-explore:hover {
+  background-color: #b62c70;
+  transform: translateY(-2px);
+}
+
+/* === Responsive for smaller screens === */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 16px;
+    margin: 24px auto;
+  }
+
+  .home-text h1 {
+    font-size: 2rem;
+  }
+
+  .home-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-text p {
+    font-size: 1rem;
+  }
+}

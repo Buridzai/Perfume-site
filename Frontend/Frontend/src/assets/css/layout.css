@@ -1,0 +1,416 @@
+body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', 'Noto Sans JP', Arial, sans-serif;
+  background: linear-gradient(135deg, #fbf6f3 0%, #fbeff6 100%);
+  color: #292626;
+  letter-spacing: 0.02em;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* HEADER - glass, accent */
+header {
+  width: 100vw;
+  background: rgba(255, 248, 252, 0.77);
+  backdrop-filter: blur(7px) saturate(1.35);
+  border-bottom: 0.5px solid #e6b9c8;
+  box-shadow: 0 6px 28px 0 rgba(223,173,192,0.09);
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  transition: background 0.18s;
+}
+.header-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 42px;
+  height: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  position: relative;
+}
+.logo span[role="img"] {
+  font-size: 40px;
+  margin-right: 3px;
+  filter: grayscale(0.1) opacity(0.93) drop-shadow(0 1px 0 #fff6fa);
+}
+.logo h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #e29ab4;
+  margin: 0;
+  letter-spacing: 2px;
+  font-family: 'Noto Serif JP', 'Segoe UI', serif;
+  text-shadow: 0 1px 12px #f4e2ec;
+}
+.logo::after {
+  content: "";
+  background: url('https://pngimg.com/uploads/sakura/sakura_PNG107.png') no-repeat;
+  position: absolute;
+  left: 60px; bottom: -12px;
+  width: 22px; height: 22px;
+  background-size: contain;
+  opacity: 0.43;
+  pointer-events: none;
+  z-index: 2;
+}
+nav {
+  display: flex;
+  gap: 28px;
+  background: rgba(255,240,247,0.44);
+  border-radius: 16px;
+  padding: 7px 22px 7px 17px;
+  box-shadow: 0 1.5px 9px 0 rgba(234,180,196,0.13);
+  align-items: center;
+}
+nav a {
+  text-decoration: none;
+  color: #79495a;
+  font-weight: 700;
+  font-size: 16.5px;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 4px;
+  transition: border 0.18s, color 0.18s, background 0.16s;
+  letter-spacing: 0.01em;
+}
+nav a:hover, nav a.active {
+  color: #ea6fa0;
+  border-bottom: 2px solid #ea6fa0;
+  background: rgba(255,222,240,0.3);
+}
+
+/* MAIN */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 44px auto 0 auto;
+  padding: 44px 30px 32px 30px;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(206,175,183,0.08);
+  max-width: 880px;
+  min-height: 410px;
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2 {
+  margin-top: 0;
+  color: #be627b;
+  font-weight: 700;
+  font-family: 'Noto Serif JP', 'Segoe UI', serif;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.7em;
+}
+
+button, .btn {
+  background: linear-gradient(90deg, #f3bccd 10%, #e9a5be 90%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 17px;
+  padding: 9px 24px;
+  font-size: 1rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(233,165,190,0.09);
+  transition: background 0.16s, box-shadow 0.16s;
+}
+button:hover, .btn:hover {
+  background: linear-gradient(90deg, #e9a5be 10%, #be627b 100%);
+  box-shadow: 0 6px 24px rgba(233,165,190,0.14);
+}
+
+/* FOOTER - gradient, accent hoa */
+footer {
+  width: 100vw;
+  background: linear-gradient(90deg, #fbe9f5 0%, #faf7fa 100%);
+  border-top: 1.5px solid #e6b9c8;
+  color: #a7758b;
+  text-align: center;
+  font-size: 16px;
+  padding: 27px 0 20px 0;
+  margin: 0;
+  box-shadow: 0 -1.5px 16px rgba(224,171,197,0.07);
+  border-radius: 0 0 16px 16px;
+  letter-spacing: 0.09em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+footer .footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  font-family: 'Noto Serif JP', 'Segoe UI', serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #e29ab4;
+  letter-spacing: 2px;
+  gap: 9px;
+}
+footer .footer-logo span {
+  font-size: 20px;
+  filter: grayscale(0.1) opacity(0.93);
+}
+footer .footer-note {
+  font-size: 13.5px;
+  color: #c5a0af;
+  margin-top: 7px;
+  opacity: 0.72;
+}
+footer::after {
+  content: "";
+  background: url('https://pngimg.com/uploads/sakura/sakura_PNG107.png') no-repeat;
+  position: absolute;
+  right: 28px; bottom: 8px;
+  width: 23px; height: 23px;
+  background-size: contain;
+  opacity: 0.32;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Accent sakura ở góc trái */
+body::after {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  left: 0; bottom: 0;
+  width: 110px; height: 110px;
+  z-index: 0;
+  background: url('https://pngimg.com/uploads/sakura/sakura_PNG107.png') no-repeat bottom left;
+  opacity: 0.09;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .header-container, main {
+    max-width: 99vw;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .header-container {
+    height: auto;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 5vw;
+  }
+  .logo h1 {
+    font-size: 19px;
+  }
+  nav {
+    gap: 13px;
+  }
+  main {
+    padding: 17px 4vw 10px 4vw;
+    margin-top: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo h1 {
+    font-size: 13px;
+  }
+  .logo span[role="img"] {
+    font-size: 20px;
+  }
+  nav a {
+    font-size: 12.5px;
+    padding: 4px 0;
+    border-radius: 2px;
+  }
+  main {
+    padding: 8px 1vw 6px 1vw;
+    margin-top: 5px;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 17px;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e9a5be;
+  background: #fffafd;
+  color: #73355a;
+  font-size: 1rem;
+  margin-top: 3px;
+  transition: border-color 0.16s, box-shadow 0.16s;
+  font-family: inherit;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #be627b;
+  box-shadow: 0 2px 7px rgba(233,165,190,0.12);
+}
+.contact-form label {
+  font-weight: 500;
+  color: #be627b;
+}
+
+
+/* đăng nhập - đăng kí  */
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 18px;
+}
+.account-form input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e9a5be;
+  background: #fffafd;
+  color: #73355a;
+  font-size: 1rem;
+  margin-top: 3px;
+  transition: border-color 0.16s, box-shadow 0.16s;
+  font-family: inherit;
+}
+.account-form input:focus {
+  outline: none;
+  border-color: #be627b;
+  box-shadow: 0 2px 7px rgba(233,165,190,0.12);
+}
+.account-form label {
+  font-weight: 500;
+  color: #be627b;
+}
+.form-error {
+  color: #d63384;
+  margin-top: 7px;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+
+.add-product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(233, 165, 190, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: inherit;
+}
+
+.add-product-form label {
+  font-weight: 500;
+  color: #be627b;
+  font-size: 1rem;
+}
+
+.add-product-form input,
+.add-product-form textarea,
+.add-product-form select {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e9a5be;
+  background: #fffafd;
+  color: #73355a;
+  font-size: 1rem;
+  margin-top: 3px;
+  transition: border-color 0.16s, box-shadow 0.16s;
+  font-family: inherit;
+}
+
+.add-product-form input:focus,
+.add-product-form textarea:focus,
+.add-product-form select:focus {
+  outline: none;
+  border-color: #be627b;
+  box-shadow: 0 2px 7px rgba(233, 165, 190, 0.12);
+}
+
+.add-product-form button {
+  background: linear-gradient(90deg, #f3bccd 10%, #e9a5be 90%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 17px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(233, 165, 190, 0.09);
+  transition: background 0.16s, box-shadow 0.16s;
+  align-self: flex-start;
+}
+
+.add-product-form button:hover {
+  background: linear-gradient(90deg, #e9a5be 10%, #be627b 100%);
+  box-shadow: 0 6px 24px rgba(233, 165, 190, 0.14);
+}
+
+.image-preview {
+  margin-top: 8px;
+  max-width: 140px;
+  max-height: 140px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e9a5be;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+.logout-btn {
+  background: transparent;
+  border: none;
+  color: #d63384;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 12px;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+
+.logout-btn:hover {
+  color: #a3185f;
+  text-decoration: underline;
+}
