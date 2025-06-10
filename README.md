@@ -69,7 +69,6 @@ Một **RESTful API** cho ứng dụng bán nước hoa, xây dựng bằng Gola
 
 ## Phần Chưa Hoàn Thành (Part 2)
 
-Dưới đây liệt kê những tiêu chí trong Part 2 mà dự án hiện tại chưa thực hiện, cùng với mô tả ngắn gọn để bạn có kế hoạch hoàn thiện:
 
 1. **Redis Caching**  
    - Hiện trạng: Chưa có bất kỳ kết nối hay logic nào liên quan đến Redis.  
